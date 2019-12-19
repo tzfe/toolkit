@@ -8,8 +8,20 @@
     "dev": "tsc -w",
     "build": "tsc "
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "typescript",
+    "library",
+    "toolkit"
+  ],
+  "author": "tzfe",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tzfe/toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tzfe/toolkit/issues"
+  },
+  "homepage": "https://github.com/tzfe/toolkit",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.7.3"
