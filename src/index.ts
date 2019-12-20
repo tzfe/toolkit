@@ -1,1 +1,1 @@
-export { SearchKey } from "./decorators/index";
+export * from "./decorators";

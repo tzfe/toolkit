@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tzfe/toolkit": "^0.0.1"
+    "@tzfe/toolkit": "../"
   }
 }

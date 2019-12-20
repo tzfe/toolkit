@@ -2,7 +2,5 @@
 # yarn lockfile v1
 
 
-"@tzfe/toolkit@^0.0.1":
+"@tzfe/toolkit@../":
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@tzfe/toolkit/-/toolkit-0.0.1.tgz#a3a8ba4a35537051ab9d6fe163518b54ae5b17b2"
-  integrity sha512-RWxITrP5nFqRIgZpvMIMiIqZhcdsQjvPjN3hS+57kl3W6GtZeJ/WOxTlNvAJhkGSS5SvZz9PpLfgkLyXVovyYQ==

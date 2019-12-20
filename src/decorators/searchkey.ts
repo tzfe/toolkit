@@ -1,12 +1,13 @@
+interface IConditions {
+  [key: string]: string;
+}
+
 /**
  * 格式化查询参数
  * @param conditions 查询条件 例如 {a:'name_like_or_unitName_like'}
  * @param backKey 后端解析key关键字名称
  */
-export function SearchKey(
-  conditions: { [key: string]: string },
-  backKey = "searchKeys"
-) {
+export function SearchKey(conditions: IConditions, backKey = "searchKeys") {
   return function(
     target: any,
     methodName: string,
@@ -15,14 +16,16 @@ export function SearchKey(
     const fun = descriptor.value;
     descriptor.value = function() {
       let args = arguments;
-      for (let index in args) {
-        const argValue = args[index];
 
-        for (let key in argValue) {
-          for (let condition in conditions) {
-            if (key === condition) {
-              argValue[`${backKey}[${conditions[condition]}]`] = argValue[key];
-              delete argValue[key];
+      for (let argValue of Object.values(args)) {
+        if (argValue instanceof Object) {
+          for (let key in argValue) {
+            for (let condition in conditions) {
+              if (key === condition) {
+                argValue[`${backKey}[${conditions[condition]}]`] =
+                  argValue[key];
+                delete argValue[key];
+              }
             }
           }
         }
