@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var toolkit_1 = require("@tzfe/toolkit");
+var index_1 = require("../lib/index");
 var Example = /** @class */ (function () {
     function Example() {
         this.obj = { a: 1 };
@@ -16,9 +16,9 @@ var Example = /** @class */ (function () {
         console.log("sec", sec);
     };
     __decorate([
-        toolkit_1.SearchKey({ a: "name_like_or_unitName_like" })
+        index_1.SearchKey({ a: "name_like_or_unitName_like" })
     ], Example.prototype, "setSearchKey", null);
     return Example;
 }());
 var example = new Example();
-example.setSearchKey({ a: 1, "b@": 2, c: 3 }, 123);
+example.setSearchKey({ a: 1, "b@": 2, c: 3 }, [123]);

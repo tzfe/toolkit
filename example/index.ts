@@ -1,4 +1,4 @@
-import { SearchKey } from "@tzfe/toolkit";
+import { SearchKey } from "../lib/index";
 
 class Example {
   public obj: any = { a: 1 };
@@ -12,4 +12,4 @@ class Example {
 
 const example = new Example();
 
-example.setSearchKey({ a: 1, "b@": 2, c: 3 }, 123);
+example.setSearchKey({ a: 1, "b@": 2, c: 3 }, [123]);
